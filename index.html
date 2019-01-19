@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Phi Calculator</title>
+  <meta charset="utf-8">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300" rel="stylesheet"> 
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <img src="Phi.svg">
+
+    <h2>Phi calculator</h2>
+    <div class="input-area">
+        <p>Please input a number</p>
+
+      <input id="numb">
+
+      <button id="button" type="button" onclick="myFunction()">Submit</button>
+
+      <p id="demo"></p>
+    </div>
+  </div>
+    
+<script>
+
+const phi = (1+(Math.sqrt(5)))/2;
+
+function myFunction() {
+  var x, text;
+
+  x = document.getElementById("numb").value;
+
+  if (isNaN(x) || (x % phi > 0.5)) {
+    text = `${x} is not based on Phi`;
+  } else {
+    text = `${x} is based on Phi`;
+  }
+  if (x === "") {
+    text = ""
+  }
+  document.getElementById("demo").innerHTML = text;
+}
+</script>
+
+</body>
+</html>  
+
+
+
+
+
+
